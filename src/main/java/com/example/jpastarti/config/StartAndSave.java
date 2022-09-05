@@ -11,8 +11,11 @@ import java.time.LocalDate;
 @Component
 public class StartAndSave implements CommandLineRunner {
 
-    @Autowired
     StudentRepository studentRepository;
+
+    public StartAndSave(StudentRepository studentRepository) {
+        this.studentRepository = studentRepository;
+    }
 
     @Override
     public void run(String... args) throws Exception {
