@@ -7,6 +7,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 
 @Component
 public class StartAndSave implements CommandLineRunner {
@@ -22,6 +23,7 @@ public class StartAndSave implements CommandLineRunner {
         Student std1 = new Student();
         std1.setBorn(LocalDate.now());
         std1.setName("Anne");
+        std1.setBornTime(LocalTime.now());
         studentRepository.save(std1);
 
         Student std2 = new Student();
