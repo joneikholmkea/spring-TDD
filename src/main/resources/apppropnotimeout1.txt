@@ -4,8 +4,8 @@ spring.datasource.password=${JDBCPassword}
 
 spring.jpa.hibernate.ddl-auto=update
 
-spring.datasource.hikari.connection-timeout = 300000
-spring.datasource.hikari.max-lifetime=1200000
 spring.datasource.hikari.minimumIdle=10
+spring.datasource.hikari.maximumPoolSize=10
 spring.datasource.hikari.idleTimeout=300000
-
+spring.datasource.hikari.maxLifetime=50000
+spring.datasource.hikari.connection-timeout=300000
