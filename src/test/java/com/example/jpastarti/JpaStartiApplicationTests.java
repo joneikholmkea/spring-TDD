@@ -16,33 +16,33 @@ import java.util.Optional;
 @DataJpaTest
 class JpaStartiApplicationTests {
 
-    @Autowired
-    StudentRepository studentRepository;
+//    @Autowired
+//    StudentRepository studentRepository;
 
     @Test
     void contextLoads() {
     }
 
-    @Test
-    void testStudent() {
-        Student std1 = new Student();
-        std1.setBorn(LocalDate.now());
-        std1.setName("Annex");
-        studentRepository.save(std1);
-
-        Student std2 = new Student();
-        std2.setBorn(LocalDate.now());
-        std2.setName("Viggo");
-        studentRepository.save(std2);
-
-        List<Student> lst = studentRepository.findAll();
-        assertEquals(2, lst.size());
-
-        studentRepository.delete(std1);
-        lst = studentRepository.findAll();
-        assertEquals(1, lst.size());
-
-
-    }
+//    @Test
+//    void testStudent() {
+//        Student std1 = new Student();
+//        std1.setBorn(LocalDate.now());
+//        std1.setName("Annex");
+//        studentRepository.save(std1);
+//
+//        Student std2 = new Student();
+//        std2.setBorn(LocalDate.now());
+//        std2.setName("Viggo");
+//        studentRepository.save(std2);
+//
+//        List<Student> lst = studentRepository.findAll();
+//        assertEquals(2, lst.size());
+//
+//        studentRepository.delete(std1);
+//        lst = studentRepository.findAll();
+//        assertEquals(1, lst.size());
+//
+//
+//    }
 
 }
